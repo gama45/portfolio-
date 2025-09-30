@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Developer Portfolio — PANKAJ</title>
+  <meta name="description"
+    content="An interactive portfolio showcasing projects, skills, and contact information with smooth navigation and animations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Primary">
+      <a href="#hero" class="logo">PANKAJ</a>
+      <button id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+      <ul id="navLinks" class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a class="btn" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="hero" class="hero">
+      <div class="container">
+        <h1 class="reveal-up">Hi, I’m PANKAJ</h1>
+        <p class="lead reveal-up">Building interactive, accessible web apps that turn ideas into delightful user
+          experiences.</p>
+        <div class="cta reveal-up">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title reveal-up">About Me</h2>
+        <p class="reveal-up">Frontend developer focused on performance, accessibility, and polished micro‑interactions.
+          Previously built dashboards, landing pages, and mapping tools.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2 class="section-title reveal-up">Skills</h2>
+        <ul class="skills reveal-up" role="list">
+          <li>HTML5</li>
+          <li>CSS3 / Tailwind</li>
+          <li>JavaScript (ES6+)</li>
+          <li>React</li>
+          <li>Python</li>
+          <li>nodejs</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title reveal-up">Projects</h2>
+
+        <div class="filters reveal-up" role="group" aria-label="Project filters">
+          <button class="chip" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" data-filter="web">Web</button>
+          <button class="chip" data-filter="tools">Tools</button>
+        </div>
+
+        <div class="grid">
+          <article class="card reveal-up" data-cat="web">
+            <img src="assets/img/p1.jpg" alt="Analytics dashboard UI preview" />
+            <div class="card-body">
+              <h3>Analytics Dashboard</h3>
+              <p>Real‑time charts and filters with accessible components.</p>
+              <button class="link open-modal" data-id="p1" aria-haspopup="dialog">Details</button>
+            </div>
+          </article>
+
+          <article class="card reveal-up" data-cat="tools">
+            <img src="assets/img/p2.jpg" alt="Developer CLI tool preview" />
+            <div class="card-body">
+              <h3>Dev CLI</h3>
+              <p>Scaffolds projects with linting and test setup in seconds.</p>
+              <button class="link open-modal" data-id="p2" aria-haspopup="dialog">Details</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2 class="section-title reveal-up">Contact</h2>
+        <form id="contactForm" class="reveal-up" aria-describedby="contact-hint">
+          <p id="contact-hint">Send a message—email and LinkedIn also welcome below.</p>
+          <label> Name
+            <input name="name" required />
+          </label>
+          <label> Email
+            <input name="email" type="email" required />
+          </label>
+          <label> Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn">Send</button>
+        </form>
+        <ul class="contact-list reveal-up" role="list">
+          <li><a class="link" href="patigarpan45@gmail.com">Gmail</a></li>
+          <li><a class="link" href="https://www.linkedin.com/in/pankaj-p-1aa640219/">LinkedIn</a></li>
+          <li><a class="link" href="https://github.com/gama45">GitHub</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><small>© Pankaj · Built with semantic HTML, CSS, and JS</small></div>
+  </footer>
+
+  <dialog id="projectModal" aria-label="Project details">
+    <article>
+      <button id="closeModal" class="close" aria-label="Close">×</button>
+      <div id="modalContent" class="modal-content"></div>
+    </article>
+  </dialog>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
